@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .about-container {
+    background-image: url("https://png.pngtree.com/background/20211215/original/pngtree-blue-wave-ocean-background-hd-design-picture-image_1461617.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .about-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    border: none;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    color: #000;
+  }
+  
+  .about-nav a:hover {
+    color: #555;
+    border-radius: 5%;
+  }
+  
+  .about-content {
+    flex: 1;
+    display: flex;
+    /* text-align: justify; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5% 5%;
+  }
+  
+  .about-card {
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 25px;
+    height: 400px;
+    text-align: justify;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    flex: 1 1 300px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .about-card h4 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .about-card img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .about-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .about-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  footer {
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icon img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .social-icon:hover {
+    transform: translateY(-5px);
+  }
+  .animate-fade-in {
+    opacity: 0;
+    font-size: 30px;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .animate-slide-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.8s ease-in-out forwards;
+  }
+  
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-slide-down {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideDown 0.8s ease-in-out forwards;
+  }
+  
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  
