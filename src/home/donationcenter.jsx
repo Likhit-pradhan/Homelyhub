@@ -35,21 +35,21 @@ function Donationcenter() {
 
   return (
     <div className="App">
-      <h1>Form</h1>
+      <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Donation Center Form</h1>
       <form onSubmit={handleSubmit}>
-        <label>Name:</label>
-        <input type="text" name="name" value={formData.name} onChange={handleChange} required /><br />
+        <label style={{ display: 'block', marginBottom: '10px' }}>Name:</label>
+        <input type="text" name="name" value={formData.name} onChange={handleChange} style={{ width: '60%', padding: '10px', marginBottom: '10px', borderRadius: '5px', border: '1px solid #ccc' }} required />
 
-        <label>Address:</label>
-        <input type="text" name="address" value={formData.address} onChange={handleChange} required /><br />
+        <label style={{ display: 'block', marginBottom: '10px' }}>Address:</label>
+        <input type="text" name="address" value={formData.address} onChange={handleChange} style={{ width: '60%', padding: '10px', marginBottom: '10px', borderRadius: '5px', border: '1px solid #ccc' }} required />
 
-        <label>Email:</label>
-        <input type="email" name="email" value={formData.email} onChange={handleChange} required /><br />
+        <label style={{ display: 'block', marginBottom: '10px' }}>Email:</label>
+        <input type="email" name="email" value={formData.email} onChange={handleChange} style={{ width: '60%', padding: '10px', marginBottom: '10px', borderRadius: '5px', border: '1px solid #ccc' }} required />
 
-        <label>Phone:</label>
-        <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required /><br />
+        <label style={{ display: 'block', marginBottom: '10px' }}>Phone:</label>
+        <input type="tel" name="phone" value={formData.phone} onChange={handleChange} style={{ width: '60%', padding: '10px', marginBottom: '10px', borderRadius: '5px', border: '1px solid #ccc' }} required />
 
-        <button type="submit">Submit</button>
+        <button type="submit" style={{ width: '60%', backgroundColor: '#007bff', color: '#fff', padding: '10px', borderRadius: '5px', border: 'none', cursor: 'pointer' }}>Submit</button>
       </form>
     </div>
   );

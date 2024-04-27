@@ -1,116 +1,72 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./signup.css";
-import signup from "../images/signup.png"
-import SignIn from "./signin";
-import { Link } from "react-router-dom";
-function SignUp() {
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [address, setAddress] = useState("");
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");const navigate = useNavigate();
-
-  const handleSignUp = () => {
-    fetch("http://localhost:5000/api/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ username, password }),
-    })
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error("User registration failed");
-        }
-      })
-      .then((data) => {
-        alert("User account created successfully");
-        navigate("./signin");
-      })
-      .catch((error) => {
-        console.error("Error signing up:", error);
-        setErrorMessage("Registration failed. Please try again.");
-      });
+import React from 'react';
+import './signup.css';
+import axios from 'axios';
+import { useState } from 'react';
+function Signup() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    address:'',
+    phonenumber:'',
+    password: ''
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
   };
-
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:4000/donors', formData);
+      if (response && response.data) {
+        console.log('User registered successfully:', response.data);
+        alert('registered sucessfully');
+        window.location.href="./signin";
+        // Optionally, you can redirect the user to another page or show a success message
+      } else {
+        console.error('Empty response received');
+        // Handle empty response: display error message or perform other actions
+      }
+    } catch (error) {
+      console.error('Error registering user:', error.response.data);
+      // Handle error: display error message or perform other actions
+    }
+  };
   return (
-    <div className="grandparent-signup">
-      <nav className="navbar">
-        <Link to="/">Home</Link>
-        <Link to="/signup">Sign Up</Link>
-        <Link to="/signin">Sign In</Link>
-      </nav>
+    <div className="signup-background">
+      <div className="shape"></div>
+      <div className="shape"></div>
+      <form className="signup-form" onSubmit={handleSubmit}>
+        <h3>Signup Here</h3>
+        <input type="text" placeholder="Enter your name" name="name" value={formData.name} 
+            onChange={handleChange} 
+            required/>
+        <input type="email" placeholder="Enter your email" name="email" value={formData.email} 
+            onChange={handleChange} 
+            required />
+        <input type="text" placeholder="Enter your address" name="address" value={formData.address} 
+            onChange={handleChange} 
+            required/>
+        <input type="text" placeholder="Enter your phone number" name="phonenumber" value={formData.phonenumber} 
+            onChange={handleChange} 
+            required/>
+        <input type="password" placeholder="Enter your password" name="password" value={formData.password} 
+            onChange={handleChange} 
+            required/>
 
-      <div className="parent-signup">
-        <div className="signup-container">
-          <div className="signup-content">
-            <div className="signup-image">
-              <img style={{height : '300px' , width: '350px'}}
-                src={signup}
-                alt="sign-up"
-              />
-            </div>
-            <div className="signup-form">
-              <h2>Sign Up</h2>
-              {errorMessage && <p className="error-message">{errorMessage}</p>}
-              <input
-                className="signup-input"
-                type="text"
-                placeholder="Name"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-              <input
-                className="signup-input"
-                type="text"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <input
-                className="signup-input"
-                type="text"
-                placeholder="Phone Number"
-                value={phoneNumber}
-                onChange={(e) => setPhoneNumber(e.target.value)}
-              />
-              <input
-                className="signup-input"
-                type="text"
-                placeholder="Address"
-                value={address}
-                onChange={(e) => setAddress(e.target.value)}
-              />
-              
-              <input
-                className="signup-input"
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <input
-                className="signup-input"
-                type="password"
-                placeholder="Confirm Password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-              />
-              <button className="signup-button" onClick={handleSignUp}>
-                Sign Up
-              </button>
-            </div>
-          </div>
+        <button className="signup-button" type="submit">Signup</button>
+
+        <div className="social">
+          {/*<div className="go"><i className="fab fa-google"></i> Google</div>*/}
+          {/*<div className="fb"><i className="fab fa-facebook"></i> Facebook</div>*/}
+          <div className="fb" onClick={() => {window.location.href = "/signin";}}><i className="fab fa-facebook"></i> Signin</div>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
 
-export default SignUp;
-
+export default Signup;

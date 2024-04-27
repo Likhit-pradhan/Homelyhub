@@ -1,114 +1,129 @@
 import React from "react";
-import "./contact.css";
-import {Link} from "react-router-dom";
+//import "./contact.css";
+import { Link } from "react-router-dom";
 import About from "../about/about";
 //import Contact from "../contact/contact";
 import SignUpForm from "../login/signup";
+
 function Contact() {
   return (
-    <div className="contact-container">
+    <div>
       <nav>
-        <Link to={"/"}>Home</Link>
-        <Link to={"/about"}>About us</Link>
-        <Link to={"/contact"}>Contact us</Link>
-        <Link to={"/signup"}>Sign Up</Link>
+        <input type="checkbox" id="check" />
+        <label htmlFor="check" className="checkbtn">
+          <i className="fas fa-bars"></i>
+        </label>
+        <label className="logo">HomelyHub</label>
+        <ul>
+          <li>
+            <a className="active" href="#">
+              Home
+            </a>
+          </li>
+          <li>
+            <Link to={"/about"}>About</Link>
+          </li>
+          <li>
+          <Link to={"/contact"}>Contact</Link>
+          </li>
+          <li>
+          <Link to={"/support"}>Support</Link>
+          </li>
+          <li>
+          <button className="btn btn--turqouise btn--lg"><Link to={"/about"}>Donate</Link></button>
+          </li>
+        </ul>
       </nav>
-
-      <div className="container">
-        <h1>Contact Us</h1>
-        <p>
-          If you have any questions or need further assistance, please feel free
-          to get in touch with us.
-        </p>
-
-        <div className="flex-container">
-          <div className="contact-form">
-            <h2>Contact Form</h2>
-            <form action="#" method="post">
-              <label htmlFor="name">Your Name:</label>
-              <input type="text" id="name" name="name" required />
-
-              <label htmlFor="email">Your Email:</label>
-              <input type="email" id="email" name="email" required />
-
-              <label htmlFor="message">Your Message:</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                required
-              ></textarea>
-
-              <button id="contact-button" type="submit">Send Message</button>
-            </form>
-          </div>
-
-          <div className="contact-details">
-            <h2>Contact Details</h2>
-            <div className="detail">
-              <div className="emoji">🏢</div>
-              <div className="info">
-                <h3>Address: Bhubaneswar, Odisha</h3>
-              </div>
-            </div>
-            <div className="detail">
-              <div className="emoji">📞</div>
-              <div className="info">
-                <h3>Phone number: 8895532358</h3>
-              </div>
-            </div>
-            <div className="detail">
-              <div className="emoji">📧</div>
-              <div className="info">
-                <h3>Email: Panda12212@gmail.com</h3>
-              </div>
-            </div>
-            <div className="detail">
-              <div className="emoji">💬</div>
-              <div className="info">
-                <h3>WhatsApp: 881221245</h3>
-              </div>
-            </div>
-            <div className="detail">
-              <div className="emoji">💬</div>
-              <div className="info">
-                <h3>
-                  Instagram:{" "}
-                  <a href="https://www.instagram.com/your-instagram-account">
-                    instagram.com/your-instagram-account
-                  </a>
-                </h3>
-              </div>
-            </div>
-            <div className="detail">
-              <div className="emoji">💬</div>
-              <div className="info">
-                <h3>
-                  Twitter:{" "}
-                  <a href="https://www.twitter.com/your-twitter-account">
-                    twitter.com/your-twitter-account
-                  </a>
-                </h3>
-              </div>
-            </div>
-            <div className="detail">
-              <div className="emoji">🌐</div>
-              <div className="info">
-                <h3>
-                  Facebook:
-                  <a href="https://www.facebook.com/your-facebook-account">
-                    facebook.com/your-facebook-account
-                  </a>
-                </h3>
+      <div className="site-content">
+        <main className="contact">
+          <div className="contact-top">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-8 offset-lg-2">
+                  <div className="contact-top__inner t-wysiwyg t-wysiwyg--sm t-center t-white">
+                    <h1>Contact us</h1>
+                    <p>We are here for you always. Call us, email us, or visit us for all your queries and suggestions. Alternatively, you can send us a message by filling the adjacent form, and we will get in touch with you asap.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+          <section className="contact-info">
+            <div className="container">
+              <div className="row gy-5">
+                <div className="col-lg-5 col-xl-4 offset-xl-1">
+                  <div className="-ml-xl-8">
+                    <div className="row gy-5">
+                      <div className="col-md-6 col-lg-12">
+                        <div className="contact-info__group">
+                          <h2>Visit us</h2>
+                          <p>End Poverty <br />Plot No. 64, Institutional Area, Sector - 18, Sarhaul, Gurugram, Haryana - 122015</p>
+                        </div>
+                      </div>
+                      <div className="col-md-6 col-lg-12">
+                        <div className="contact-info__group">
+                          <h2>Get in touch</h2>
+                          <ul className="u-list-reset">
+                            <li className="p-icon p-icon--tel">
+                              <a href="tel:0124-4101200">0124-4101200</a> <a href="tel:0124-4101239">0124-4101239</a>
+                            </li>
+                            <li className="p-icon p-icon--mail">
+                              <a href="mailto:contact@endpovertyindia.org">contact@endpovertyindia.org</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-7 col-xl-6">
+                  <div className="-mx-xl-8">
+                    <div className="contact-form">
+                      <div className="contact-form__part contact-form__part--form">
+                        <h2>Leave us a message</h2>
+                        <form action="https://endpoverty.org.in/wp-content/themes/endpoverty/script-contact-form-send.php" method="post" className="form form-contact validate">
+                          <div className="form-row form-row--2col">
+                            <div className="form-field">
+                              <input name="firstname" type="text" placeholder="First Name" data-error-text="First name Error" className="req" />
+                            </div>
+                            <div className="form-field">
+                              <input name="lastname" type="text" placeholder="Last Name" data-error-text="Last name is required" className="req" />
+                            </div>
+                          </div>
+                          <div className="form-row form-row--2col">
+                            <div className="form-field">
+                              <input name="email" type="text" placeholder="Email" data-error-text="Email is required" className="email req" />
+                            </div>
+                            <div className="form-field">
+                              <input name="phone" type="text" placeholder="Phone Number" data-error-text="Phone is required" />
+                            </div>
+                          </div>
+                          <div className="form-field">
+                            <textarea name="message" placeholder="Your Message" data-error-text="Message is required" className="req"></textarea>
+                          </div>
+                          <div className="form-field form-field--checkbox">
+                            <label className="checkbox">
+                              <input type="checkbox" name="agree" value="1" data-error-text="Your consent is required." className="req" />
+                              <span className="checkmark"></span> EndPoverty will use all data provided hereunder in accordance with the <a href="privacy-policy-url">Privacy Policy</a>.
+                            </label>
+                          </div>
+                          <div className="form-field form-field--captcha captcha_row">
+                            <div className="g-recaptcha" data-sitekey="6LdHW5kbAAAAAIylBI2OmcyVsVq3H3AHA1Jtyr7o" data-callback="recaptcha_callback" data-error-text="Captcha is required"></div>
+                          </div>
+                          <button type="submit" className="btn btn--turqouise btn--rwd btn--md">Send message</button>
+                        </form>
+                      </div>
+                      <div className="contact-form__part contact-form__part--success">
+                        <p>Your message was sent. Thank you!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
-
-      <footer>
-        <p>&copy; 2024 HomelyHub. All rights reserved.</p>
-      </footer>
     </div>
   );
 }

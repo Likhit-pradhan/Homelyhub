@@ -53,7 +53,7 @@ function Home() {
             <Link to={"/contact"}>Contact</Link>
             <Link to={"/signup"}>Sign Up</Link>
             <Link to={"/signin"}>Sign In</Link>
-            <Link to={"/adminlogin"}>Admin Sign In</Link>
+            {/*<Link to={"/adminlogin"}>Admin Sign In</Link>*/}
             <Link to="/donationcenter">
                 Join with us
               </Link>

@@ -1,120 +1,107 @@
 import React from "react";
 import "./about.css";
-import "../home/home.css";
-import vision from "../images/vision.png";
-import goal from "../images/goal.png";
-import mission from "../images/mission.png";
+import "../home/home1.css";
 import { Link } from "react-router-dom";
-import whatsapp from "../images/whatsapp.png";
-import insta from "../images/insta.png";
-import twitter from "../images/twitter.png";
-//import HomePage from "../homepage/homepage";
 import Contact from "../contact/contact";
 import SignUp from "../login/signup";
-
+import Programs from "../home/home2";
+import Support from "../support/support";
 function About() {
   return (
-    <div className="about-container">
-      <nav className="about-nav animate-slide-down">
-        <Link to="/">Home</Link>
-        <Link to="/about">About Page</Link>
-        <Link to="/contact">Contact Us</Link>
-        <Link to="/signup">Sign Up</Link>
+    <div>
+      <nav>
+        <input type="checkbox" id="check" />
+        <label htmlFor="check" className="checkbtn">
+          <i className="fas fa-bars"></i>
+        </label>
+        <label className="logo">HomelyHub</label>
+        <ul>
+          <li>
+            <a className="active" href="/">
+              Home
+            </a>
+          </li>
+          <li>
+            <Link to={"/about"}>About</Link>
+          </li>
+          <li>
+            <Link to={"/contact"}>Contact</Link>
+          </li>
+          <li>
+            <Link to={"/support"}>Support</Link>
+          </li>
+          <li>
+            <button className="btn btn--turqouise btn--lg">
+              <Link to={"/about"}>Donate</Link>
+            </button>
+          </li>
+        </ul>
       </nav>
-      <h1 className="animate-fade-in">About Us</h1>
-      <div className="about-content">
-        <div className="about-card animate-scale">
-          <h4>Our Vision</h4>
-          <img src={vision} alt="Vision" />
-          <p>
-          The vision of a poverty-focused website is to create a world where every individual has access to basic needs, opportunities for sustainable livelihoods, and a pathway out of poverty through empowerment, education, and community support.
-          </p>
-        </div>
-        <div className="about-card animate-scale">
-          <h4>Our Goal</h4>
-          <img src={goal} alt="Goal" />
-          <p>
-            The goal of a poverty-focused website is to raise awareness, provide resources, and facilitate action towards alleviating poverty through education, advocacy, and support.
-          </p>
-        </div>
-        <div className="about-card animate-scale">
-          <h4>Our Mission</h4>
-          <img src={mission} alt="Mission" />
-          <p>
-          The mission of a poverty-focused website is to empower individuals and communities by providing resources, advocating for systemic change, and fostering collaboration to address the root causes of poverty and create sustainable solutions for economic and social well-being.
-          </p>
+      <div className="aboutbody">
+        <div className="aboutinfo">
+          <div
+            className="t-wysiwyg t-wysiwyg--lg"
+            style={{ marginTop: "100px", textAlign: "left" }}
+          >
+            <p>
+              End Poverty (EP) is a civil society organization, started in the
+              year 2009, based in India that designs and delivers innovative
+              solutions for the poor of India in partnership with national and
+              international organizations.
+            </p>
+            <p>
+              EP’s approach is to enable and empower people for change and
+              support them with identifying solutions and making informed
+              choices. The programs are designed after meeting the targeted
+              beneficiary groups, understanding their needs and aspirations,
+              in-depth research, with scientific and strategic inputs from a
+              team of experts and dedicated professionals.
+            </p>
+          </div>
+          <div
+            className="p-img-shape"
+            style={{ marginTop: "80px", position: "relative" }}
+          >
+            <img
+              src="https://endpoverty.org.in/wp-content/themes/endpoverty/static/images/doodles/hero-1.svg"
+              alt="hero-1"
+              style={{ width: "750px", height: "400px" }}
+            />
+            <svg
+              width="300"
+              height="280"
+              viewBox="0 0 647 610"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+            >
+              <path
+                d="M475.558 109.284C539.882 159.398 605.502 203.086 632.267 264.764C659.465 326.014 647.377 404.825 609.387 460.934C571.397 517.044 507.073 550.453 448.793 574.867C390.944 599.281 338.708 614.701 291.22 608.704C243.733 602.708 200.994 574.867 157.392 545.742C114.221 516.616 70.1875 485.777 39.9681 439.518C9.31705 393.688 -7.51942 332.01 3.2732 273.331C14.0658 214.651 52.0559 158.541 103.86 104.573C156.097 50.6048 221.284 -2.07845 285.177 0.0631468C349.069 2.20474 411.666 58.7428 475.558 109.284Z"
+                fill="url(#patternHero)"
+              ></path>
+            </svg>
+            <div className="about-overlay">About</div>
+          </div>
         </div>
       </div>
-    <footer className="new_footer_area bg_color">
-    <div className="new_footer_top">
-        <div className="container">
-            <div className="row">
-                <div className="col-lg-3 col-md-6">
-                    <div className="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style={{visibility: "visible", animationDelay: "0.2s", animationName: "fadeInLeft"}}>
-                        <h3 className="f-title f_600 t_color f_size_18">Get in Touch</h3>
-                        <form action="#" className="f_subscribe_two mailchimp" method="post" noValidate={true} _lpchecked="1">
-                            <input type="text" name="EMAIL" className="form-control memail" placeholder="Email" />
-                            <button className="btn btn_get btn_get_two" type="submit">Subscribe</button>
-                            <p className="mchimp-errmessage" style={{display: "none"}}></p>
-                            <p className="mchimp-sucmessage" style={{display: "none"}}></p>
-                        </form>
-                    </div>
-                </div>
-                <div className="new-footer">
-                <div className="col-lg-3 col-md-6">
-                    <div className="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style={{visibility: "visible", animationDelay: "0.4s", animationName: "fadeInLeft"}}>
-                        <h3 className="f-title f_600 t_color f_size_18">Pages</h3>
-                        <ul className="list-unstyled f_list">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">SignIn</a></li>
-                            <li><a href="#">SignUp</a></li>
-                            <li><a href="#">Landing Page</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="col-lg-3 col-md-6">
-                    <div className="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style={{visibility: "visible", animationDelay: "0.6s", animationName: "fadeInLeft"}}>
-                        <h3 className="f-title f_600 t_color f_size_18">Help</h3>
-                        <ul className="list-unstyled f_list">
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Term &amp; conditions</a></li>
-                            <li><a href="#">Reporting</a></li>
-                            <li><a href="#">Documentation</a></li>
-                            <li><a href="#">Support Policy</a></li>
-                            <li><a href="#">Privacy</a></li>
-                        </ul>
-                    </div>
-                </div>
-                </div>
-                <div className="col-lg-3 col-md-6">
-                    <div className="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style={{visibility: "visible", animationDelay: "0.8s", animationName: "fadeInLeft"}}>
-                        <h3 className="f-title f_600 t_color f_size_18">Join us in social media.</h3>
-                        { <div className="f_social_icon">
-                            <img src={insta} alt="" />
-                            <img src={whatsapp} alt="" />
-                            <img src={twitter} alt="" />
-                        </div> }
-                    </div>
-                </div>
-            </div>
+      <Programs />
+      <div className="contributor">
+        <div class="t-wysiwyg t-wysiwyg--md t-center" style={{marginTop:"50px"}}>
+          <h2 style={{ marginTop: "30px" }}>Donors &amp; Contributors</h2>
+          <p style={{ textAlign: "center" }}>
+            Strategic partnerships and close cooperation with our donors and
+            leading organizations around the globe makes us stronger and helps
+            us in creating sustainable social impact
+          </p>
         </div>
-        <div className="footer_bg">
-            <div className="footer_bg_one"></div>
-            <div className="footer_bg_two"></div>
-        </div>
-    </div>
-    <div className="footer_bottom">
-        <div className="container">
-            <div className="row align-items-center">
-                <div className="col-lg-6 col-sm-7">
-                    <p className="mb-0 f_400">© HomelyHub 2024 All rights reserved.</p>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</footer>
+      <div className="contributor-image">
+        <img
+          src="https://st2.depositphotos.com/3643473/6205/i/450/depositphotos_62059745-stock-photo-man-with-chart-financial.jpg"
+          width="500px"
+          height="500px"
+        />
+      </div>
+      </div>
     </div>
   );
 }

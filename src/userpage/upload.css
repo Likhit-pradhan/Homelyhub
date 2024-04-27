@@ -1,7 +1,20 @@
 .box-layout {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    width: 20%;
-  }
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 20%;
+}
+.container {
+  background-image: url("https://www.cpacanada.ca/-/media/cpa-digital-hub/featured-images/2019/12/hub_12_18_charity-hero-1200x900.jpg");
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

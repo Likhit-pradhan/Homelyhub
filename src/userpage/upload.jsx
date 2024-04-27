@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import './upload.css'; 
-import ThankYouPage from '../thankyou/thank';
+
 function ShowData() {
   const [storedData, setStoredData] = useState(null);
   const [selectedImages, setSelectedImages] = useState([]);
@@ -10,14 +9,11 @@ function ShowData() {
     const data = JSON.parse(localStorage.getItem('formData'));
     setStoredData(data);
   };
-  {/*const handleDelete = (index) => {
-    // Remove the item at the specified index from storedData
-    const newData = [...storedData];
-    newData.splice(index, 1);
-    setStoredData(newData);
-    // Update localStorage with the new data
-    localStorage.setItem('formData', JSON.stringify(newData));
-  };*/}
+
+  const handleshowinmap = (address) => {
+    //  map page with the address data
+    window.location.href = `/map?address=${encodeURIComponent(address)}`;
+  };
 
   const handleImageChange = (e) => {
     const files = Array.from(e.target.files);
@@ -31,12 +27,20 @@ function ShowData() {
     // Display a message with the selected address
     alert(`You have selected the address: ${selectedAddress}`);
     window.location.href = "/thank";
-
   };
+
+   const handleDelete = (index) => {
+    // Remove the item at the specified index from storedData
+    const newData = [...storedData];
+    newData.splice(index, 1);
+    setStoredData(newData);
+    // Update localStorage with the new data
+    localStorage.setItem('formData', JSON.stringify(newData));
+  }; // <-- Move this closing brace to the correct position
 
   return (
     <div className="container">
-      <h1>Stored Data</h1>
+      <h1>Your Donation</h1>
       <input type="file" onChange={handleImageChange} accept="image/*" multiple />
       <div className="image-preview">
         {selectedImages.map((imageUrl, index) => (
@@ -54,6 +58,7 @@ function ShowData() {
                   <p><strong>Address:</strong> {user.address}</p>
                   <button onClick={() => handleSelect(index)}>Select</button>
                   {/*<button onClick={() => handleDelete(index)}>Delete</button>*/}
+                  <button onClick={() => handleshowinmap(user.address)}>Show in map</button>
                 </div>
               </div>
             </div>

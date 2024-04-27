@@ -1,137 +1,115 @@
-.parent-signup {
-    position: relative;
-    background-image: url("https://png.pngtree.com/background/20211215/original/pngtree-blue-wave-ocean-background-hd-design-picture-image_1461617.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .navbar {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    /*background-color: #333;*/
-  }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .navbar a:hover {
-    color: lightgray;
-  }
-  
-  .signup-container {
-    width: 100%;
-    max-width: 600px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .signup-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .signup-image {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .signup-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  .signup-form {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-  }
-  
-  .signup-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .signup-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-  }
-  
-  .signup-button {
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
-  }
-  
-  .signup-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
-    text-align: center;
-  }
-  .signup-container {
-    opacity: 0;
-    transform: translateX(100px);
-    animation: slideIn 0.8s ease-in-out forwards;
-  }
-  
-  @keyframes slideIn {
-    0% {
-      opacity: 0;
-      transform: translateX(100px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  .signup-button {
-    transition: transform 0.3s ease;
-  }
-  
-  .signup-button:hover {
-    transform: scale(1.05);
-  }
-  .signup-image img {
-    animation: float 3s ease-in-out infinite alternate;
-  }
-  
-  @keyframes float {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-10px);
-    }
-  }
-  
+.signup-background {
+  background-image: url("https://img.freepik.com/free-vector/white-background-gradient-modern-abstract-design-wave_343694-2337.jpg");
+  width: 1300px;
+  height: 800px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.signup-background .shape {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.signup-background .shape:first-child {
+  background: linear-gradient(#1845ad, #23a2f6);
+  left: -80px;
+  top: -80px;
+}
+
+.signup-background .shape:last-child {
+  background: linear-gradient(to right, #ff512f, #f09819);
+  right: -30px;
+  bottom: -80px;
+}
+
+.signup-form {
+  height: 520px;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 50px 35px;
+}
+
+.signup-form h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.signup-form label {
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.signup-form input {
+  display: block;
+  height: 40px;
+  width: 100%;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.signup-button {
+  margin-top: 30px;
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+  background-color: #0056b3;
+}
+
+.social {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social div {
+  width: 60%;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #3b5998;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+.social div:first-child {
+  background-color: #db4437;
+}
+
+.social div:hover {
+  opacity: 0.8;
+}
+
+.social i {
+  margin-right: 5px;
+}
