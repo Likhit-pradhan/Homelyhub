@@ -8,7 +8,7 @@ function Programs() {
         className="pl-lg-10"
         style={{ marginTop: "60px", textAlign: "left" }}
       >
-        <span className="t-label">Our Programs</span>
+        {/* <span className="t-label">Our Programs</span> */}
         <div className="t-wysiwyg t-wysiwyg--lg">
           <h2>How Do We Help?</h2>
         </div>

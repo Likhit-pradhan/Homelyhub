@@ -38,43 +38,44 @@ function About() {
         </ul>
       </nav>
       <div class="responsive-container-block bigContainer">
-  <div class="responsive-container-block Container">
-    <p class="text-blk heading">
-      About Us
-    </p>
-    <p class="text-blk subHeading">
-    End Poverty (EP) is a civil society organization, started in the
-              year 2009, based in India that designs and delivers innovative
-              solutions for the poor of India in partnership with national and
-              international organizations.
-    </p>
-    <p class="text-blk subHeading">
-              EP’s approach is to enable and empower people for change and
-              support them with identifying solutions and making informed
-              choices. The programs are designed after meeting the targeted
-              beneficiary groups, understanding their needs and aspirations,
-              in-depth research, with scientific and strategic inputs from a
-              team of experts and dedicated professionals.
-            </p>
-    <div class="social-icons-container">
-      <a class="social-icon">
-        <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb33.png"></img>
-      </a>
-      <a class="social-icon">
-        <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb34.png"></img>
-      </a>
-      <a class="social-icon">
-        <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb35.png"></img>
-      </a>
-      <a class="social-icon">
-        <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb36.png"></img>
-      </a>
-    </div>
-  </div>
-  <Programs />
-      
-    </div>
-      
+        <div class="responsive-container-block Container">
+          <p class="text-blk heading">
+            About Us
+          </p>
+          <p class="text-blk subHeading">
+            End Poverty (EP) is a civil society organization, started in the
+            year 2009, based in India that designs and delivers innovative
+            solutions for the poor of India in partnership with national and
+            international organizations.
+          </p>
+          <p class="text-blk subHeading">
+            EP’s approach is to enable and empower people for change and
+            support them with identifying solutions and making informed
+            choices. The programs are designed after meeting the targeted
+            beneficiary groups, understanding their needs and aspirations,
+            in-depth research, with scientific and strategic inputs from a
+            team of experts and dedicated professionals.
+          </p>
+          <Programs />
+          <div class="social-icons-container">
+            <a class="social-icon">
+              <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb33.png"></img>
+            </a>
+            <a class="social-icon">
+              <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb34.png"></img>
+            </a>
+            <a class="social-icon">
+              <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb35.png"></img>
+            </a>
+            <a class="social-icon">
+              <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb36.png"></img>
+            </a>
+          </div>
+        </div>
+        
+          
+      </div>
+          
     </div>
   );
 }
