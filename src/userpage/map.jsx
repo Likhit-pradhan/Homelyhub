@@ -120,7 +120,7 @@ function DonationCenter(props) {
 }
 
 export default GoogleApiWrapper({
-  apiKey: "AIzaSyDJaFr-HFXGBOg8pUSdQfGjGwGdIwtbXhY"
+  apiKey: 
 })(DonationCenter);*/
 
 
