@@ -124,52 +124,52 @@ export default GoogleApiWrapper({
 })(DonationCenter);*/
 
 
+/**CHnages after wards */
 
 
+// import React, { useState, useEffect } from 'react';
+// // import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
+// //import Navbar from './navbar';
 
-import React, { useState, useEffect } from 'react';
-import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
-//import Navbar from './navbar';
+// function ShowinMap(props) {
+//   const [mapCenter, setMapCenter] = useState(null);
 
-function ShowinMap(props) {
-  const [mapCenter, setMapCenter] = useState(null);
+//   useEffect(() => {
+//     // Extract address data from URL params
+//     const urlParams = new URLSearchParams(window.location.search);
+//     const address = urlParams.get('address');
 
-  useEffect(() => {
-    // Extract address data from URL params
-    const urlParams = new URLSearchParams(window.location.search);
-    const address = urlParams.get('address');
+//     // Perform geocoding to get coordinates from address
+//     if (address) {
+//       geocodeAddress(address);
+//     }
+//   }, []);
 
-    // Perform geocoding to get coordinates from address
-    if (address) {
-      geocodeAddress(address);
-    }
-  }, []);
+//   const geocodeAddress = (address) => {
+//     const { google } = props;
+//     const geocoder = new google.maps.Geocoder();
+//     geocoder.geocode({ address }, (results, status) => {
+//       if (status === 'OK') {
+//         const location = results[0].geometry.location;
+//         setMapCenter({ lat: location.lat(), lng: location.lng() });
+//       } else {
+//         console.error('Geocode was not successful for the following reason:', status);
+//       }
+//     });
+//   };
 
-  const geocodeAddress = (address) => {
-    const { google } = props;
-    const geocoder = new google.maps.Geocoder();
-    geocoder.geocode({ address }, (results, status) => {
-      if (status === 'OK') {
-        const location = results[0].geometry.location;
-        setMapCenter({ lat: location.lat(), lng: location.lng() });
-      } else {
-        console.error('Geocode was not successful for the following reason:', status);
-      }
-    });
-  };
+//   return (
+//     <div>
+//       <Map google={props.google} zoom={14} center={mapCenter}>
+//         {mapCenter && (
+//           <Marker name="Selected Location" position={mapCenter} />
+//         )}
+//       </Map>
+//     </div>
+//   );
+// }
 
-  return (
-    <div>
-      <Map google={props.google} zoom={14} center={mapCenter}>
-        {mapCenter && (
-          <Marker name="Selected Location" position={mapCenter} />
-        )}
-      </Map>
-    </div>
-  );
-}
-
-export default GoogleApiWrapper({
-  apiKey: "AIzaSyDJaFr-HFXGBOg8pUSdQfGjGwGdIwtbXhY"
-})(ShowinMap);
+// export default GoogleApiWrapper({
+//   apiKey: "AIzaSyDJaFr-HFXGBOg8pUSdQfGjGwGdIwtbXhY"
+// })(ShowinMap);
 
